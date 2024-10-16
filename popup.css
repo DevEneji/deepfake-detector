@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  width: 300px;
+  background-color: purple;
+}
+
+h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Container to hold the label and toggle switch */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50; /* Green when enabled */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Styling the status text */
+#status {
+  font-size: 16px;
+  color: white;
+}
+
+#results {
+  margin-top: 15px;
+  font-size: 14px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.result-entry {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.result-entry a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.result-entry a:hover {
+  text-decoration: underline;
+}
+
+.result-entry p {
+  margin: 5px 0 0 0;
+}
