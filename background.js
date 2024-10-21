@@ -15,7 +15,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             reader.onloadend = function() {
                 const base64data = reader.result.split(',')[1];
                 // Send to backend server for processing
-                fetch('https://your-backend-server.com/api/detect', {
+                fetch('https://localhost:8000/api/detect', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
