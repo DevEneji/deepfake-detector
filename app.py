@@ -11,14 +11,14 @@ app = FastAPI()
 # Allow CORS from the browser extension
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["chrome-extension://nfiemlfpkjcjfioljgijplejgpomamki"],  # Replace with your extension's ID
+    allow_origins=["chrome-extension://nfiemlfpkjcjfioljgijplejgpomamki"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 # Load your deepfake detection model once at startup
-model = tf.keras.models.load_model("model/my_model.h5")
+model = tf.keras.models.load_model("model/my_model.h5") # 'my_model.h5' to be replaced with the real model's name
 
 @app.post("/api/detect")
 async def detect_deepfake(file: UploadFile = File(...)):
