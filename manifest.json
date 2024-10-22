@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Deepfake Detector for TikTok and Facebook",
+    "name": "Deepfake Detector for YouTube",
     "version": "1.0",
-    "description": "Detects deepfake videos on TikTok and Facebook.",
+    "description": "Detects deepfake videos on YouTube.",
     "permissions": [
       "activeTab",
       "scripting",
